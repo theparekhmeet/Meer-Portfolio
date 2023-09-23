@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+            font-family: 'ubuntu', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgb(22, 7, 36);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            line-height: 5rem;
+        }
+
+        .left h1 {
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        .checkBtn {
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .checkBtn {
+            cursor: pointer;
+            font-size: 30px;
+            float: right;
+            color: #ed1e79;
+            line-height: 80px;
+        }
+
+        .right ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .right ul li a {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 1s;
+        }
+
+        .right ul li a:hover {
+            background-color: #fff;
+            border-radius: 7px;
+            color: rgb(22, 7, 36);
+
+        }
+
+        @media screen and (max-width:805px) {
+            .list {
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(22, 7, 36);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 4rem;
+                left: 100%;
+                transition: all 1s;
+            }
+
+            #check {
+                display: none;
+            }
+
+            .checkBtn {
+                display: block;
+            }
+
+            #check:checked~ul {
+                left: 0%;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <h1>Navbar</h1>
+        </div>
+        <div class="right">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkBtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Sevices</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
